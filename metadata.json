@@ -1,0 +1,6 @@
+{
+  "name": "Hudson Water vs. Erg - Newburgh Rowing Predictor",
+  "description": "Predicts water vs. ergometer rowing likelihood for Newburgh Rowing Club practices on the Hudson River based on wind, tide vs current chop, safety rules, and weather.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
