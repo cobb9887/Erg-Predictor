@@ -12,6 +12,9 @@ import {
   ClipboardList
 } from 'lucide-react';
 
+import heroWaterImg from '../assets/images/hero_hudson_rowing_1791996206470.jpg';
+import ergBoathouseImg from '../assets/images/erg_indoor_boathouse_1791996207108.jpg';
+
 interface HeroVerdictProps {
   session: PracticeSession;
   onOpenCoachBriefing: () => void;
@@ -27,9 +30,7 @@ export const HeroVerdict: React.FC<HeroVerdictProps> = ({
   const { weather, tide, prediction } = session;
   const isWater = prediction.waterLikelihood >= 50;
 
-  const heroImage = isWater
-    ? '/src/assets/images/hero_hudson_rowing_1791996206470.jpg'
-    : '/src/assets/images/erg_indoor_boathouse_1791996207108.jpg';
+  const heroImage = isWater ? heroWaterImg : ergBoathouseImg;
 
   const handleCopyShareText = async () => {
     const verdictText = isWater ? '🚣 ON THE WATER' : '⚡ INDOOR ERGOMETERS';
